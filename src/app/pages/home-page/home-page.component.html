@@ -1,11 +1,11 @@
-<div>
-    <h1 class="display-4 text-center py-5">Todays Deals</h1>
-</div>
+<div class="deals-section container">
+  <h1 class="display-4 text-center py-5 heading-title">Today's Deals</h1>
 
-<div class="row">
-    @for (product of products; track product.id){
-        <div class="col-md-4">
-            <app-card [product]="product"></app-card>
-        </div>
+  <div class="row">
+    @for (product of products; track product.id) {
+      <div class="col-sm-6 col-md-4 mb-4 d-flex justify-content-center">
+        <app-card [product]="product" class="product-card"></app-card>
+      </div>
     }
+  </div>
 </div>
